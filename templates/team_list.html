@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Standings{% endblock title %}
+
+{% block content %}
+
+
+
+<table border="1" style="border:2px solid black;padding:50px; border-spacing:50px; margin-left:auto;margin-right:auto;">
+<tr>
+  <th>School</th>
+    <th>Mascot</th>
+  <th>Wins</th>
+  <th>Losses</th>
+</tr>
+  {% for Team in object_list%}
+      <tr>
+            <td>{{ Team.school }}</td>
+            <td>{{ Team.mascot }}</td>
+            <td>{{ Team.wins }}</td>
+            <td>{{ Team.losses }}</td>
+        </tr>
+
+  {% endfor %}
+    </table>
+    <br>
+    <br>
+
+
+{% endblock content %}

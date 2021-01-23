@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Scoreboard{% endblock title %}
+
+{% block content %}
+    <table border="1" style="border:2px solid black;padding:50px; border-spacing:50px; margin-left:auto;margin-right:auto;">
+<tr>
+  <th>Week</th>
+  <th>Home Team</th>
+  <th>Home Team Score</th>
+  <th>Away Team</th>
+  <th>Away Team Score</th>
+<th>Winner</th>
+
+</tr>
+  {% for Game in object_list %}
+      <tr>
+            <td>{{ Game.week_number }}</td>
+          <td>{{ Game.home_team }}</td>
+          <td>{{ Game.home_team_score }}</td>
+          <td>{{ Game.away_team }}</td>
+          <td>{{ Game.away_team_score }}</td>
+      <td>{{ Game.winner }}</td>
+
+
+        </tr>
+  {% endfor %}
+{% endblock content %}
