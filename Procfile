@@ -1,1 +1,1 @@
-web: gunicorn Assignment3.wsgi --log-file -
+web: gunicorn 8220Assign1P1.wsgi --log-file -
